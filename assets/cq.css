@@ -1,0 +1,33 @@
+.large-font {
+    font-size: 2cm;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    background-color:darkolivegreen;
+    
+}
+p {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+}
+button {
+    color:black;
+    letter-spacing: 0.21px;
+    line-height: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #b22222 0%, 100% );
+    transition-duration: 0.20s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  
+}
