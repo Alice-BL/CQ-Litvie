@@ -1,11 +1,23 @@
+body {
+    background-color:goldenrod;
+}
 .large-font {
     font-size: 2cm;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bold;
-    color:white;
-    background-color:darkolivegreen;
+    color:black;
     
+}
+.high-score, .time-left {
+    color:black;
+    font-weight: bold;
+}
+.timer {
+    text-align: right;
+    margin-top: 0;
+    position: relative;
+    font-weight: bold;
 }
 p {
     font-family:'Times New Roman', Times, serif;
@@ -18,16 +30,50 @@ button {
     line-height: 14px;
     padding: 10px 20px;
     text-align: center;
-    background: radial-gradient(circle, #b22222 0%, 100% );
+    background: radial-gradient(circle, 0%, 100% );
+    background-color:lightgray;
     transition-duration: 0.20s;
     transition-property: background-color;
     transition-timing-function: linear;
     cursor: pointer;
-    margin: 0;
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  
+    border-radius: 5px;
+    font-weight: bold;
+    
 }
+
+.quiz-box {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background-color:white;
+    border-radius: 5px;
+}    
+.questions {
+    color: blueviolet;
+}
+.answer1 {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:purple;
+}
+.answer2 {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:blue;
+    border-inline-color: black;
+}
+
+@media screen and (max-width: 504px) {
+    .large-font {
+      font-size: 2em;
+    }
