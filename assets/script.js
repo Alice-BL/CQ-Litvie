@@ -1,3 +1,17 @@
+// The startQuiz function is called when the start button is clicked
+function startQuiz() {
+    
+    timerCount = 75;
+  startTimer();
+}
+
+
+
+
+
+
+
+
 // questions for the quiz
 /* Q1. Which one of the following Array Methods that you can use if you want to add a value as the last item of the array?
 (push method; pop method; sort method; shift method) */
