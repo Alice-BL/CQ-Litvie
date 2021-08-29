@@ -1,5 +1,5 @@
 body {
-    background-color:goldenrod;
+    background-color:lightsteelblue;
 }
 .large-font {
     font-size: 2cm;
@@ -24,7 +24,7 @@ p {
     text-align: center;
     font-weight: bold;
 }
-button {
+.start-button {
     color:black;
     letter-spacing: 0.21px;
     line-height: 14px;
@@ -45,35 +45,83 @@ button {
     font-weight: bold;
     
 }
-
 .quiz-box {
-    
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 450px;
-    background-color:white;
+    width: 550px;
+    background: white;
     border-radius: 5px;
-}    
-.questions {
-    color: blueviolet;
-}
-.answer1 {
-    display: flex;
-    border-radius: 5px;
-    padding: 10px;
-    background-color:purple;
-}
-.answer2 {
-    display: flex;
-    border-radius: 5px;
-    padding: 10px;
-    background-color:blue;
-    border-inline-color: black;
+    padding: 20px;
 }
 
-@media screen and (max-width: 504px) {
-    .large-font {
-      font-size: 2em;
+.questions {
+    display: inline-block;
+    color: black;
+    justify-content: center;
+    font-size: 16;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-break: 20px;
+}
+.answer-1, .answer-2, .answer-3, .answer-4 {
+    
+    color:black;
+    letter-spacing: 0.21px;
+    line-height: 14px;
+    padding: 10px 20px;
+    text-align: left;
+    background: radial-gradient(circle, 0%, 100% );
+    background-color:lightgray;
+    transition-duration: 0.20s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    cursor: pointer;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 15px;
+}
+.answer-1:hover, .answer-2:hover, .answer-3:hover, .answer-4:hover, .next-btn:hover {
+    background-color:lightpink;
+}
+.submit-btn, .back, .clear {
+    color: red;
+    background:darkslategray;
+}
+.submit-btn:hover, .back:hover, .clear:hover {
+    background: darkblue;
+}
+
+.complete-box {
+    background: white;
+    width: 350px;
+    padding: 30px 35px;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.scores-box {
+    background: white;
+    width: 350px;
+    padding: 30px 35px;
+    border-radius: 5px;
+    display:inline-block;
+    align-items: center;
+    justify-content: space-between;
+    text-size-adjust: 16px;
+    font-weight: bolder;
+}
+@media screen and (max-width: 1183px) {
+    main {
+      flex-direction: column;
     }
+  
