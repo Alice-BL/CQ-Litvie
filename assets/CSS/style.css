@@ -56,13 +56,6 @@ p {
     padding: 20px;
     display: none;
 }
-.quiz-box.activeInfo {
-    z-index: 5;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-    
-}
 
 .questions {
     display: inline-block;
