@@ -34,14 +34,13 @@ function setTime() {
 // Quiz-box appeared after clicking start quiz button
 function startQuiz() {
     // hide the first page
-    var startScreenEl = Document.getElementById("start-screen");
+    var startScreenEl = document.getElementById("start-screen");
     startScreenEl.remove();
-    // un-hide question section
-    questionEl.getAttribute("quiz-box");
-
-startButton.addEventListener("click", startQuiz);
+    
 }
- 
+startQuiz();
+
+
 
 
 
