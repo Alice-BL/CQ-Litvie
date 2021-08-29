@@ -1,13 +1,30 @@
 // The startQuiz function is called when the start button is clicked
-function startQuiz() {
-    
-    timerCount = 75;
-  startTimer();
+// Add eventListener to my button
+
+// Show question lists
+var startButton = document.querySelector(".start-button");
+var timerElement = document.querySelector(".timer-count");
+var questionList = document.querySelector(".quiz-box");
+var completeQ = document.querySelector(".complete-box");
+
+timerCount = 75;
+var timerCount;
+var timer;
+
+document.querySelector(".start-button").addEventListener("click", startButton); 
+
+// if Start Quiz button clicked => timer starts counting down
+function startTimer() {
+    timer = setInterval(function(){
+        timerCount--;
+        timerElement.textContent = timerCount;
+
+    }, 1000);
 }
+            
 
-
-
-
+startTimer();
+ 
 
 
 
