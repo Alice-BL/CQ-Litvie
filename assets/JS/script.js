@@ -11,34 +11,43 @@ var timer;
 
 // if Start Quiz button clicked => timer starts counting down
 
-document.querySelector(".start-button").addEventListener("click", setTime); 
 
-function setTime() {
-    var secondsLeft = 75;
-    var timerInterval = setInterval(function() {
-    
-    if (secondsLeft >0) {
-        secondsLeft--;
-        timerEl.textContent = secondsLeft;
-        secondsLeft = secondsLeft--;
-        
-      }
-      else {
-        timerEl.textContent = '';
-        clearInterval(timerInterval);
-    }
-        
-    }, 1000);
-}
 
 // Quiz-box appeared after clicking start quiz button
 function startQuiz() {
     // hide the first page
     var startScreenEl = document.getElementById("start-screen");
     startScreenEl.remove();
+
+
+    // un-hide question section
+    var questionEl = document.getElementsByClassName("quiz-box");
+    
+
+    function setTime() {
+        var secondsLeft = 75;
+        var timerInterval = setInterval(function() {
+        
+        if (secondsLeft >0) {
+            secondsLeft--;
+            timerEl.textContent = secondsLeft;
+            secondsLeft = secondsLeft--;
+            
+          }
+          else {
+            timerEl.textContent = '';
+            clearInterval(timerInterval);
+        }
+            
+        }, 1000);
+    }
+    setTime();
     
 }
-startQuiz();
+
+startButton.addEventListener("click", startQuiz); 
+
+
 
 
 

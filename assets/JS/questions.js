@@ -35,7 +35,7 @@ var quizQuestion = [
         options: ["tag", "class", "element", "id"]
     }
 ];
-var que_count = 0;
+
 // Getting questions and options from array
 function showQuestions() {
     var que_text = document.querySelector(".questions");
@@ -47,6 +47,8 @@ function showQuestions() {
 
 
 
+que_tex : class for q1
+option-list : for optios
 
 
 
