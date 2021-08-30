@@ -9,21 +9,15 @@ var startScreenEl = document.getElementById("start-screen");
 var timerCount;
 var timer;
 
-// if Start Quiz button clicked => timer starts counting down
-
-
-
 // Quiz-box appeared after clicking start quiz button
 function startQuiz() {
     // hide the first page
     var startScreenEl = document.getElementById("start-screen");
     startScreenEl.remove();
 
-
     // un-hide question section
-    var questionEl = document.getElementsByClassName("quiz-box");
+        document.querySelector(".quiz-box").style.display="inline-block";
     
-
     function setTime() {
         var secondsLeft = 75;
         var timerInterval = setInterval(function() {

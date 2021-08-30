@@ -54,7 +54,7 @@ p {
     background: white;
     border-radius: 5px;
     padding: 20px;
-    display: inline-block;
+    display: none;
 }
 
 .questions {
