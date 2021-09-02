@@ -53,7 +53,8 @@ p {
     width: 550px;
     background: white;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
     display: none;
 }
 
@@ -66,7 +67,7 @@ p {
     line-break: 20px;
 }
 .answer-1, .answer-2, .answer-3, .answer-4 {
-    
+    display: grid;
     color:black;
     letter-spacing: 0.21px;
     line-height: 14px;
@@ -85,7 +86,7 @@ p {
     transform: translate(-50%, -50%);
     border-radius: 5px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 20px 0;
     line-height: 15px;
 }
 .answer-1:hover, .answer-2:hover, .answer-3:hover, .answer-4:hover, .next-btn:hover {

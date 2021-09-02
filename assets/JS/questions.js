@@ -2,7 +2,7 @@
 var quizQuestion = [
     {
         number: 1,
-        question: "Which one of the following Array Methods that you can use if you want to add new items to the end of an array?"
+        question: "Which one of the following Array Methods that you can use if you want to add new items to the end of an array?",
         answer: "Push Method",
         options: [
             "Push Method",
@@ -30,7 +30,7 @@ var quizQuestion = [
     },
     {
         number: 4,
-        quesiton: "The # symbol specifies that the selector is ___."
+        quesiton: "The # symbol specifies that the selector is ___.",
         answer: "id",
         options: ["tag", "class", "element", "id"]
     }

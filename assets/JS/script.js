@@ -5,6 +5,11 @@ var questionEl = document.querySelector(".quiz-box");
 var completeQ = document.querySelector(".complete-box");
 var startScreenEl = document.getElementById("start-screen");
 
+var answerBtn1 = document.querySelector(".option-1");
+var answerBtn2 = document.querySelector(".option-2");
+var answerBtn3 = document.querySelector(".option-3");
+var answerBtn4 = document.querySelector(".option-4");
+
 
 var timerCount;
 var timer;
@@ -19,7 +24,7 @@ function startQuiz() {
         document.querySelector(".quiz-box").style.display="inline-block";
     
     function setTime() {
-        var secondsLeft = 75;
+        var secondsLeft = 80;
         var timerInterval = setInterval(function() {
         
         if (secondsLeft >0) {
@@ -41,6 +46,12 @@ function startQuiz() {
 
 startButton.addEventListener("click", startQuiz); 
 
+function getResult1() {
+    var answerBtn1 = true;
+
+
+
+}
 
 
 
