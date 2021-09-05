@@ -1,8 +1,8 @@
 // Create an object of questions and answers
-var quizQuestion = [
+var quizQuestions = [
     {
         number: 1,
-        question1: "Which one of the following Array Methods that you can use if you want to add new items to the end of an array?",
+        question: "Which one of the following Array Methods that you can use if you want to add new items to the end of an array?",
         answer: "Push Method",
         options: [
             "Push Method",
