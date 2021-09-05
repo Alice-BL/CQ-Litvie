@@ -2,7 +2,7 @@
 var quizQuestion = [
     {
         number: 1,
-        question: "Which one of the following Array Methods that you can use if you want to add new items to the end of an array?",
+        question1: "Which one of the following Array Methods that you can use if you want to add new items to the end of an array?",
         answer: "Push Method",
         options: [
             "Push Method",
@@ -30,25 +30,25 @@ var quizQuestion = [
     },
     {
         number: 4,
-        quesiton: "The # symbol specifies that the selector is ___.",
+        question: "The # symbol specifies that the selector is ___.",
         answer: "id",
         options: ["tag", "class", "element", "id"]
     }
 ];
 
 // Getting questions and options from array
-function showQuestions() {
-    var que_text = document.querySelector(".questions");
-
-}
+//function showQuestions() {
+//    var que_text = document.querySelector(".questions");
 
 
 
 
 
 
-que_tex : class for q1
-option-list : for optios
+
+
+//que_tex : class for q1
+//option-list : for optios
 
 
 
