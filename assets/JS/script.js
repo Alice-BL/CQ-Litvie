@@ -30,10 +30,10 @@ function startQuiz() {
     // un-hide question section
     document.querySelector(".quiz-box").style.display = "inline-block";
 
-    
+
     displayQuestions(quizQuestions[quesIndex]);
     setTime();
-    
+
 }
 
 startButton.addEventListener("click", startQuiz);
@@ -41,8 +41,8 @@ startButton.addEventListener("click", startQuiz);
 // Part 2 - working on QA part
 
 function displayQuestions(q) {
-    
-    
+
+
     questionEl.textContent = q.content;
     option1.textContent = q.options[0];
     option2.textContent = q.options[1];
@@ -65,25 +65,30 @@ function displayQuestions(q) {
         userAnswer = 3;
         displayNext();
     });
-    
+
 
 }
-
+// When user answers a question, he/she will be presented with another question
 function displayNext() {
-    
-    quesIndex++;
-    if(quizQuestions[quesIndex-1].answer == quizQuestions[quesIndex-1].options[userAnswer]) {
-        // alert(totalScore);
-        totalScore++;
-    }
 
-    if(quesIndex < quizQuestions.length) {
+    quesIndex++;
+
+    if (quizQuestions[quesIndex - 1].answer == quizQuestions[quesIndex - 1].options[userAnswer]) {
+        alert("correct");
+        totalScore++;}
+        else {
+            alert("incorrect");
+        }
+     console.log(quizQuestions[quesIndex-1].answer);
+        
+
+    if (quesIndex < quizQuestions.length) {
         questionEl.textContent = quizQuestions[quesIndex].content;
         option1.textContent = quizQuestions[quesIndex].options[0];
         option2.textContent = quizQuestions[quesIndex].options[1];
         option3.textContent = quizQuestions[quesIndex].options[2];
         option4.textContent = quizQuestions[quesIndex].options[3];
-               
+
     } else {
         console.log("END OF QUIZ");
     }
@@ -104,6 +109,9 @@ function setTime() {
             timerEl.textContent = "Time Over";
             clearInterval(timerInterval);
         }
+        
+        
+        
 
     }, 1000);
 }
