@@ -1,4 +1,5 @@
 // Getting all required elements
+var gameOver = false;
 var startButton = document.querySelector(".start-button");
 var timerEl = document.querySelector(".timer-count");
 var container = document.querySelector(".quiz-box");
@@ -12,14 +13,12 @@ var option2 = document.getElementById("answer2");
 var option3 = document.getElementById("answer3");
 var option4 = document.getElementById("answer4");
 
-var timerCount;
 var timer;
 
 var quesIndex = 0;
 var score = 0;
-var totalScore = 0;
 var userAnswer = null;
-var resultQu = document.getElementById("result");
+
 
 // Quiz-box appeared after clicking start quiz button
 function startQuiz() {
@@ -72,10 +71,11 @@ function displayQuestions(q) {
 function displayNext() {
 
     quesIndex++;
-
+    // Setting alert for  right and wrong answer
     if (quizQuestions[quesIndex - 1].answer == quizQuestions[quesIndex - 1].options[userAnswer]) {
+        
         alert("correct");
-        totalScore++;}
+        }
         else {
             alert("incorrect");
         }
@@ -90,7 +90,7 @@ function displayNext() {
         option4.textContent = quizQuestions[quesIndex].options[3];
 
     } else {
-        console.log("END OF QUIZ");
+        gameOver = true;
     }
 }
 
@@ -99,24 +99,30 @@ function setTime() {
     var secondsLeft = 80;
     var timerInterval = setInterval(function () {
 
-        if (secondsLeft > 0) {
+        if (secondsLeft > 0 && !gameOver) {
+
             secondsLeft--;
             timerEl.textContent = secondsLeft;
             secondsLeft = secondsLeft--;
+
+        }
+        else if (gameOver){
+            clearInterval(timerInterval); 
+            getScore(secondsLeft);
 
         }
         else {
             timerEl.textContent = "Time Over";
             clearInterval(timerInterval);
         }
-        
-        
-        
-
+    
     }, 1000);
 }
+function getScore(secondsLeft) {
+    score += secondsLeft;
+    alert(score);
 
-
+}
 
 
 
